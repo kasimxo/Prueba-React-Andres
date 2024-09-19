@@ -1,18 +1,20 @@
 import { useContext } from "react"
-import { Pagina } from "../App"
+import { Pagina } from "../pages/Layout"
+import { Link } from "react-router-dom"
 export function Header() {
 
     return (
         <header>
             <div className="cabecera">
-                <h1>DEMO Streaming</h1>
+                <Link to='/' className='logo'>
+                    <h1>DEMO Streaming</h1>
+                </Link>
                 <div className="botones-cabecera">
-                    <button>Log in</button>
-                    <button>Start your free trial</button>
+                    <button id='login'>Log in</button>
+                    <button id='freetrial'>Start your free trial</button>
                 </div>
             </div>
             <div className="seccion">
-
                 <TextoSeccion />
             </div>
         </header>

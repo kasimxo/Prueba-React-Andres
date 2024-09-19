@@ -1,12 +1,24 @@
 body {
   background-color: white;
-  
+  margin: 0px;
+  padding: 0px;
 }
 footer {
-  background-color: gray;
-  height: 30%;
+  background-color: #414141;
+  height: 200px;
+  padding: 5px 25px 5px 25px;
 }
-
+h1, h3 {
+  cursor: default;
+}
+.logo, .logo h1 {
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.logo:hover{
+  background-color: #cccccc80;
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -17,9 +29,15 @@ footer {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  background-color: blue;
+  background-color: #0078fe;
   padding-left: 10%;
   padding-right: 10%;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+header {
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 p {
   color: black;
@@ -32,21 +50,71 @@ main {
   flex-wrap: wrap;
   gap:15px;
   margin: 25px 10% 25px 10%;
+  justify-content: center;
+  
 }
 h1 {
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.white {
+  color: white;
+  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+.gris {
+  color: rgb(189, 189, 189);
+  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+.rrss, .descargas {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 .seccion {
   padding-left: 5%;
+  padding-bottom: 3px;
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+label {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+}
+#login {
+  background-color: transparent;
+  border: 0px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+
+}
+#freetrial {
+  border: 0px;
+  color: white;
+  background-color: #414141;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+font-size: 16px;
+padding: 5px;
+}
 .carta {
   border: 0px;
+  padding: 5px;
+
   background-color: transparent;
   max-width: 200px;
+  cursor: pointer;
+}
+#login:hover, #freetrial:hover {
+  opacity: 0.6;
+}
+a{
+  text-decoration: none;
 }
 .resultado:hover {
   border: 2px solid rgb(218, 217, 217);
@@ -59,7 +127,7 @@ h1 {
   height: 300px;
 }
 header {
-  background-color: gray;
+  background-color: #414141;
 }
 #popupDialog {
   display: none;
@@ -73,7 +141,11 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
-
+.contenedor-botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 #popup {
   display: none;
   position: fixed;
@@ -83,4 +155,28 @@ header {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
+}
+#filtros {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.carta_titulo {
+  background-image: url('./assets/placeholder.png');
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.texto_titulo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
 }

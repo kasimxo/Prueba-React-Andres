@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import imagen from './../assets/placeholder.png'
-import { Pagina } from '../App'
+import { Pagina } from '../pages/Layout'
+import { Link } from 'react-router-dom'
 
 export function Titles() {
     let opciones = [<Titulos nombre='series' />, <Titulos nombre='peliculas' />]
@@ -14,8 +15,6 @@ export function Titles() {
 
 function Titulos(props) {
 
-    const { pagina, setPagina } = useContext(Pagina)
-
     let nombre = props.nombre
 
     let texto = ''
@@ -25,16 +24,13 @@ function Titulos(props) {
         texto = 'Popular Movies'
     }
 
-    function cambiarEscena() {
-        setPagina(props.nombre)
-    }
 
     return (
-
-        <button onClick={cambiarEscena} className='carta'>
-            <img src={imagen} alt={texto} title={texto} className='placeholder' />
-            <p>{texto}</p>
-        </button>
-
+        <Link to={'/' + props.nombre} className='carta'>
+            <div className='carta_titulo'>
+                <p className='texto_titulo'>{texto === 'Popular Series' ? 'SERIES' : 'MOVIES'}</p>
+            </div>
+            <p >{texto}</p>
+        </Link>
     )
 }

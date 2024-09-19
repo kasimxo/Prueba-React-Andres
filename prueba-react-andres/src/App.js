@@ -1,34 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-import { createContext, useState } from 'react';
-import { Header } from './components/Header';
-import { Main } from './components/Main';
-import { Footer } from './components/Footer';
 
-export const Pagina = createContext();
-
-const PaginaProvider = ({ children }) => {
-  // titulos peliculas series
-  const [pagina, setPagina] = useState('titulos')
-
-  return (
-    <Pagina.Provider value={
-      {
-        pagina, setPagina
-      }
-    }>{children}</Pagina.Provider>
-  )
-}
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Layout } from './pages/Layout';
+import { Inicio } from './pages/Inicio';
+import { Series } from './pages/Series';
+import { Peliculas } from './pages/Peliculas';
+import { Error } from './pages/Error';
 
 function App() {
   return (
-    <div className="App">
-      <PaginaProvider>
-        <Header />
-        <Main />
-        <Footer />
-      </PaginaProvider>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Inicio />} />
+          <Route path="series" element={<Series />} />
+          <Route path="peliculas" element={<Peliculas />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 

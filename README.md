@@ -17,14 +17,16 @@ Y por último, ejecutarlo:
 
 npm start
 
+Si no se abre automáticamente, puedes introducir la dirección http://localhost:3000/ en el navegador
 
-## Las posibles mejoras del proyecto son varias:
+
+## Las posibles mejoras del proyecto son varias (han sido incluidas en el último commit):
 
   En primer lugar, el aspecto estético de la página, mejorando el css que incluye.
 
   Incluiría la información del footer de la página, junto con los logos correspondientes.
 
-## Diferencias con más tiempo:
+## Diferencias con más tiempo (han sido incluidos en el último commit):
 
   Si tuviera más tiempo, me gustaría trabajar sobre la navegación de la página, así como hacerla responsive a todos los dispositivos. 
 
